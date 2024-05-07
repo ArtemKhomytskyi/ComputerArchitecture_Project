@@ -1,0 +1,10 @@
+MVI D, FFh
+MVI E, ABh
+CALL operation
+HLT
+operation: MOV A,D
+SUB E
+JNC skip
+CMA
+INR A
+skip: RET
